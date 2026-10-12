@@ -3,14 +3,10 @@ import { ArrowRight } from 'lucide-react'
 
 export const ease = [0.22, 1, 0.36, 1]
 
+// GrowALabs mark, a vector file in /public so it stays sharp at every size.
 export function Logo({ size = 28 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true" className="logo">
-      <rect width="32" height="32" rx="7" fill="#0b2a22" />
-      <path d="M7 21c0-6 4-9 9-9h9l-5 5h-4c-3 0-4 1-4 4z" fill="var(--mint)" />
-      <path d="M25 11c0 6-4 9-9 9H7l5-5h4c3 0 4-1 4-4z" fill="var(--green-500)" />
-    </svg>
-  )
+  const h = Math.round(size * 1.3)
+  return <img src="/logo-icon.svg" alt="" height={h} width={Math.round(h * 0.9)} className="logo" draggable="false" />
 }
 
 // Fades and lifts content in once when it enters the viewport.

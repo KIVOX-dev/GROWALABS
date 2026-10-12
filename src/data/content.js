@@ -33,10 +33,11 @@ export const steps = [
 ]
 
 // Demonstration concepts only. Replace with real case studies when available.
+// Real projects. Screenshots live in /public/images/work.
 export const work = [
-  { id: 'ops', name: 'Operations dashboard', category: 'Concept · Self-initiated', text: 'A demonstration of an internal dashboard for tracking orders, stock and team tasks in one place.', tags: ['React', 'FastAPI', 'PostgreSQL'], href: '', size: 'wide' },
-  { id: 'booking', name: 'Booking platform', category: 'Concept · Self-initiated', text: 'A demonstration appointment flow with availability rules and automated reminders.', tags: ['TypeScript', 'Node.js'], href: '', size: 'tall' },
-  { id: 'flow', name: 'Workflow automation', category: 'Concept · Self-initiated', text: 'A demonstration of connecting form intake, a database and notifications without manual copy-paste.', tags: ['Python', 'MongoDB'], href: '', size: 'std' },
+  { id: 'globaledutech', name: 'Global Edutech', category: 'Client website', text: 'A bright, easy-to-browse website for an education provider in Coimbatore. It presents preschool, after-school and home tuition programmes and more than 30 courses, such as Abacus, Handwriting, Vedic Maths and Phonics, with clear ways for parents to enquire.', tags: ['Education', 'Website', 'Coimbatore'], href: 'https://www.globaledutech.co.in/', host: 'globaledutech.co.in', img: '/images/work/globaledutech.jpg' },
+  { id: 'talentsnaps', name: 'TalentSnaps', category: 'Our own product', text: 'A campus placement platform we built and run ourselves. Students see the drives they are eligible for, apply in one tap and follow every round, while placement cells control access and verify offer letters.', tags: ['Our product', 'Placements', 'Students and colleges'], href: 'https://www.talentsnaps.com/', host: 'talentsnaps.com', img: '/images/work/talentsnaps.jpg' },
+  { id: 'certificates', name: 'We The Leaders certificate generator', category: 'Custom tool for wetheleaders.org', text: 'A custom certificate tool for We The Leaders. At an event, attendees scan a QR code, enter the event code and receive their certificate on their own phone, with no manual sending.', tags: ['Custom tool', 'QR code', 'Events'], href: 'https://certificategenerator-brown.vercel.app/', host: 'wetheleaders.org', img: '/images/work/certificates.jpg' },
 ]
 
 export const why = [

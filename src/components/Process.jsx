@@ -79,10 +79,10 @@ function LaunchVisual({ on }) {
       <div className="launch">
         <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
           {[22, 44, 66].map((y) => <line key={y} x1="0" x2="240" y1={y} y2={y} stroke="#1f2f29" vectorEffect="non-scaling-stroke" />)}
-          <motion.path d="M0 80 C30 74 50 70 80 60 S130 48 160 36 S210 18 240 8" fill="none" stroke="var(--mint)" strokeWidth="2" vectorEffect="non-scaling-stroke"
-            initial={{ pathLength: 0 }} animate={on ? { pathLength: 1 } : {}} transition={{ duration: 2.2, ease: 'easeInOut' }} />
           <motion.path d="M0 80 C30 74 50 70 80 60 S130 48 160 36 S210 18 240 8 L240 90 L0 90 Z" fill="rgba(94,234,212,0.10)" stroke="none"
             initial={{ opacity: 0 }} animate={on ? { opacity: 1 } : {}} transition={{ delay: 1.6, duration: 0.8 }} />
+          <motion.path d="M0 80 C30 74 50 70 80 60 S130 48 160 36 S210 18 240 8" fill="none" stroke="var(--mint)" strokeWidth="2" vectorEffect="non-scaling-stroke"
+            initial={{ pathLength: 0 }} animate={on ? { pathLength: 1 } : {}} transition={{ duration: 2.2, ease: 'easeInOut' }} />
         </svg>
         <div className="stats">
           <div><small>Visitors today</small><b>{visitors.toLocaleString('en-US')}</b></div>
