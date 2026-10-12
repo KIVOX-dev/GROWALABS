@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react'
 import { bySlug, solutions } from '../data/solutions'
 import { extra } from '../data/solutionsExtra'
+import { featureNotes } from '../data/featureNotes'
 import { solutionIcons } from '../components/solutionIcons'
 import Dashboard from '../components/Dashboard'
 import { Reveal, Button, stagger, item, ease } from '../components/Primitives'
@@ -92,10 +93,14 @@ export default function SolutionPage() {
           <Reveal className="section-head">
             <p className="eyebrow">What is included</p>
             <h2>Features you can expect.</h2>
+            <p className="lede">Everything below is built around how your business really works. We start with the essentials, then add what you need as you grow.</p>
           </Reveal>
           <motion.ul className="sp-feats" variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.05 }}>
-            {s.features.map((f) => (
-              <motion.li key={f} variants={item}><span className="tick"><Check size={14} /></span>{f}</motion.li>
+            {s.features.map((f, i) => (
+              <motion.li key={f} variants={item}>
+                <span className="tick"><Check size={14} /></span>
+                <div><b>{f}</b>{featureNotes[s.slug]?.[i] && <p>{featureNotes[s.slug][i]}</p>}</div>
+              </motion.li>
             ))}
           </motion.ul>
         </div>
