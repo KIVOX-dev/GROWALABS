@@ -280,7 +280,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <span className="brand-lock"><Logo size={32} /><span className="brand-name">GrowALabs</span></span>
+          <img src="/brand/logo-full-light.png" alt="GrowALabs. Where Ideas Grow" width="220" height="86" className="brand-full" loading="lazy" />
           <p>{description}</p>
         </div>
         <nav aria-label="Footer navigation">

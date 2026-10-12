@@ -129,7 +129,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease }}
     >
       <div className="container nav-inner">
-        <Link to="/" className="nav-brand" aria-label="GrowALabs home"><Logo /><span className="brand-name">GrowALabs</span></Link>
+        <Link to="/" className="nav-brand" aria-label="GrowALabs home"><img src="/brand/logo-nav.png" alt="GrowALabs" width="190" height="36" className="brand-img" /></Link>
         <nav aria-label="Primary" className="nav-links">
           {nav.map((n) => (n.label === 'Services' ? <ServicesMenu key={n.href} /> : n.label === 'Solutions' ? <SolutionsMenu key={n.href} /> : <a key={n.href} href={`/${n.href}`}>{n.label}</a>))}
         </nav>

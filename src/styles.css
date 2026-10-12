@@ -1483,3 +1483,9 @@ img.logo { display: block; height: auto; width: auto; max-height: 40px; object-f
 .wk-body p { color: var(--muted); }
 .wk-body .tags { margin-top: 4px; }
 @media (min-width: 900px) { .wk-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Brand logo images */
+.nav-brand { align-items: center; }
+.brand-img { display: block; height: 36px; width: auto; }
+.brand-full { display: block; height: auto; width: min(220px, 70%); max-width: 100%; }
+@media (max-width: 480px) { .brand-img { height: 30px; } }

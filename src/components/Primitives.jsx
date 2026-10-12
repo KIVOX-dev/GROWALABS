@@ -3,10 +3,10 @@ import { ArrowRight } from 'lucide-react'
 
 export const ease = [0.22, 1, 0.36, 1]
 
-// GrowALabs mark, a vector file in /public so it stays sharp at every size.
+// GrowALabs icon (transparent PNG, 512px source so it stays sharp on high-density screens).
 export function Logo({ size = 28 }) {
   const h = Math.round(size * 1.3)
-  return <img src="/logo-icon.svg" alt="" height={h} width={Math.round(h * 0.9)} className="logo" draggable="false" />
+  return <img src="/brand/icon-512.png" alt="" height={h} width={Math.round(h * 0.9)} className="logo" draggable="false" />
 }
 
 // Fades and lifts content in once when it enters the viewport.
