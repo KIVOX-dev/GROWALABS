@@ -185,7 +185,12 @@ function StageCard({ s, i, detail, onActive }) {
 export default function Process() {
   const [active, setActive] = useState(0)
   const onActive = useCallback((i) => setActive(i), [])
-  const jump = (i) => document.getElementById(`stage-${i}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  const jump = (i) => {
+    const el = document.getElementById(`stage-${i}`)
+    if (!el) return
+    if (window.__lenis) window.__lenis.scrollTo(el, { offset: -Math.max(80, (window.innerHeight - el.offsetHeight) / 2), duration: 2.4 })
+    else el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
   return (
     <section className="process" id="process">
       <div className="container">

@@ -9,6 +9,7 @@ import Work from './components/Work'
 import StackTiles from './components/StackTiles'
 import { Why, Engagement, Tech, FAQ, FinalCTA, Footer } from './components/Closing'
 import { ScrollProgress } from './components/Primitives'
+import SmoothScroll from './components/SmoothScroll'
 import SolutionPage from './pages/SolutionPage'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
@@ -37,10 +38,16 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation()
   useEffect(() => {
     if (hash) {
-      requestAnimationFrame(() => document.getElementById(hash.slice(1))?.scrollIntoView())
+      requestAnimationFrame(() => {
+        const el = document.getElementById(hash.slice(1))
+        if (!el) return
+        if (window.__lenis) window.__lenis.scrollTo(el, { offset: -72, immediate: true })
+        else el.scrollIntoView()
+      })
       return
     }
-    window.scrollTo(0, 0)
+    if (window.__lenis) window.__lenis.scrollTo(0, { immediate: true })
+    else window.scrollTo(0, 0)
   }, [pathname, hash])
   return null
 }
@@ -50,6 +57,7 @@ export default function App() {
     <>
       <a href="#main" className="skip">Skip to content</a>
       <ScrollProgress />
+      <SmoothScroll />
       <ScrollToTop />
       <Navbar />
       <main id="main">
