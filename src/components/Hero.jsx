@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Button, ease } from './Primitives'
+import HeroVisual from './HeroVisual'
 
 const lead = ['We', 'build', 'software', 'that', 'moves', 'your']
 
@@ -50,7 +51,7 @@ export default function Hero() {
       <div className="container hero-inner">
         <div className="hero-copy">
           <motion.p className="availability" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease }}>
-            <span className="pulse-dot" /> Based in Coimbatore, Tamil Nadu, India
+            <span className="pulse-dot" /> Available for select projects
           </motion.p>
           <h1 aria-label="We build software that moves your business forward.">
             {lead.map((w, i) => (
@@ -73,10 +74,8 @@ export default function Hero() {
             <Button href="#contact">Start a project</Button>
             <Button href="#work" variant="ghost-dark">Explore our work</Button>
           </motion.div>
-          <motion.p className="hero-tag" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 1.2 }}>
-            Software for small businesses and first-time founders
-          </motion.p>
         </div>
+        <HeroVisual />
       </div>
     </section>
   )
