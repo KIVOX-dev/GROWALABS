@@ -346,7 +346,7 @@ h3 { font-size: 1.125rem; line-height: 1.3; }
 .service-list li { display: flex; gap: 8px; align-items: flex-start; font-size: 0.85rem; color: var(--charcoal); }
 .service-list svg { color: var(--green-500); flex: none; margin: 4px 0 0; width: 13px; height: 13px; transform: none; }
 .service:hover .service-list svg { transform: none; color: var(--green-500); }
-.service svg:first-child { width: 44px; height: 44px; }
+.service > svg:first-child { width: 44px; height: 44px; }
 
 /* Solutions */
 .sol { display: grid; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; }
@@ -1498,3 +1498,81 @@ img.logo { display: block; height: auto; width: auto; max-height: 40px; object-f
 .sp-feats li b { display: block; font-weight: 600; color: var(--ink); font-size: 1.02rem; line-height: 1.3; margin-bottom: 6px; }
 .sp-feats li p { color: var(--muted); font-size: 0.93rem; line-height: 1.6; margin: 0; }
 .section-head .lede { margin-top: 14px; max-width: 56ch; }
+
+/* ===== Responsive polish: phone, tablet and desktop ===== */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { overflow-x: clip; }
+img, svg, video { max-width: 100%; }
+.service-list svg { margin-bottom: 0; }
+
+/* Phones */
+@media (max-width: 640px) {
+  :root { --gutter: 18px; }
+  .container { padding-inline: 18px; }
+  .section { padding-block: 56px; }
+  .section-head { margin-bottom: 32px; }
+  h2 { font-size: clamp(1.9rem, 1.4rem + 3vw, 2.4rem); }
+  .navbar { padding-top: env(safe-area-inset-top); }
+  .hero { min-height: 0; display: block; padding-block: 36px 52px; }
+  .hero h1 { font-size: clamp(2.3rem, 1.3rem + 6.4vw, 3rem); max-width: 100%; }
+  .hero-sub { font-size: 1.02rem; }
+  .hero-actions .btn { flex: 1 1 100%; min-height: 52px; justify-content: center; }
+  .rv { margin-top: 8px; }
+  .service { padding: 26px 22px 28px; }
+  .service svg:first-child { margin-bottom: 24px; }
+  .pr-nav { margin-inline: -18px; padding-inline: 18px; scroll-snap-type: x proximity; }
+  .pr-nav button { scroll-snap-align: start; white-space: nowrap; }
+  .sol-tabs { scroll-snap-type: x proximity; }
+  .wk-card .wk-body { padding: 22px 20px; }
+  .ab-lead, .ab-copy { padding: 26px 22px; }
+  .faq-item button { min-height: 60px; padding-block: 8px; }
+  .cta-frame, section.cta .cta-frame, section.cta .cta-form .form { padding: 26px 20px; }
+  .cta-frame { text-align: left; justify-items: start; }
+  .cta-frame .cta-points li { text-align: left; }
+  .cta-frame h2 { margin-inline: 0; }
+  .cta-frame .btn { width: 100%; justify-content: center; }
+  .footer { padding-top: 48px; }
+  .footer-base { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .sd-stage { padding: 14px 12px 40px; }
+  .sd-window .sd-top { padding: 12px 14px; }
+  .sd-kpi { padding: 12px; }
+  .sd-row { font-size: 0.74rem; gap: 6px; }
+  .sp-hero h1 { font-size: clamp(2rem, 1.3rem + 5vw, 2.6rem); }
+  .sp-actions .btn { flex: 1 1 100%; justify-content: center; }
+  .sp-feats li { padding: 18px; }
+  .td-sec h2 { font-size: 1.7rem; margin-top: 40px; }
+  .td-sub p { font-size: 1rem; }
+  .terms-h1 { font-size: clamp(2.2rem, 1.6rem + 3.4vw, 2.8rem); }
+  .btn { min-height: 48px; }
+  .mobile-menu-inner a:not(.btn) { padding: 16px 0; font-size: 1.1rem; }
+}
+
+/* Tablets */
+@media (min-width: 641px) and (max-width: 1099px) {
+  .container { padding-inline: clamp(24px, 4vw, 40px); }
+  .section { padding-block: clamp(64px, 8vw, 96px); }
+  .hero { min-height: 0; padding-block: 56px 72px; }
+  .hero h1 { font-size: clamp(2.8rem, 1.6rem + 4vw, 3.8rem); }
+  .wk-grid { grid-template-columns: 1fr 1fr; }
+  .wk-grid .wk-card:last-child { grid-column: 1 / -1; }
+  .ab-cards { grid-template-columns: 1fr 1fr; }
+  .ab-cards li:last-child { grid-column: 1 / -1; }
+  .ab-story { grid-template-columns: 1fr; }
+  .eg { grid-template-columns: 1fr; }
+  .eg-visual { display: none; }
+  .mega-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sp-related { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Large screens */
+@media (min-width: 1500px) {
+  .container { max-width: 1400px; }
+  body::before { width: min(100%, 1400px); }
+  .hero h1 { font-size: clamp(3.4rem, 4.2vw, 5.4rem); }
+}
+
+/* Touch devices: no hover-only effects, bigger targets */
+@media (hover: none) {
+  .nav-drop-btn { min-height: 44px; }
+  .tech-logo:hover, .wk-shot:hover .wk-img img { transform: none; }
+}
