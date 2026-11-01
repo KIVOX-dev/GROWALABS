@@ -1471,7 +1471,9 @@ img.logo { display: block; height: auto; width: auto; max-height: 40px; object-f
 /* Selected work: real projects with live screenshots */
 .wk-grid { display: grid; gap: 28px; }
 .wk-card { display: grid; background: #fff; border: 1px solid var(--line); }
-.wk-shot { display: block; background: #f1ece3; border-bottom: 1px solid var(--line); overflow: hidden; }
+.wk-shot { display: block; position: relative; background: #f1ece3; border-bottom: 1px solid var(--line); overflow: hidden; }
+.wk-stamp.is-done { border-color: #1f7a45; color: #1f7a45; }
+.wk-stamp { position: absolute; right: 14px; bottom: 14px; transform: rotate(-8deg); padding: 6px 12px; border: 2px solid #b4281e; border-radius: 4px; background: rgba(255, 255, 255, 0.88); color: #b4281e; font: 700 12px/1 var(--mono, ui-monospace, monospace); letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none; box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.88); }
 .wk-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #f6f1e8; border-bottom: 1px solid var(--line); }
 .wk-bar i { width: 9px; height: 9px; border-radius: 50%; background: #d6cdbd; }
 .wk-bar em { margin-left: 10px; font-style: normal; font-family: var(--mono); font-size: 0.7rem; color: var(--muted); padding: 3px 10px; background: #fff; border: 1px solid var(--line); border-radius: 4px; }

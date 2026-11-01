@@ -16,6 +16,7 @@ export default function Work() {
               <a className="wk-shot" href={w.href} target="_blank" rel="noopener noreferrer" aria-label={`Open ${w.name}`}>
                 <span className="wk-bar"><i /><i /><i /><em>{w.host}</em></span>
                 <span className="wk-img"><img src={w.img} alt={`${w.name} website screenshot`} loading="lazy" width="1440" height="650" /></span>
+                {w.stamp && <span className={`wk-stamp${w.stamp === 'Completed' ? ' is-done' : ''}`}>{w.stamp}</span>}
               </a>
               <div className="wk-body">
                 <p className="eyebrow">{w.category}</p>
