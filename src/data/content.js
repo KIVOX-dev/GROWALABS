@@ -24,6 +24,8 @@ export const services = [
   { id: 'saas', title: 'SaaS and product engineering', text: 'MVPs, internal platforms, dashboards, and scalable product foundations.' },
   { id: 'auto', title: 'Business automation', text: 'Connect tools, reduce repetitive tasks, and streamline everyday operations.' },
   { id: 'ai', title: 'AI and backend systems', text: 'Practical AI integrations, APIs, databases, and reliable backend infrastructure.' },
+  { id: 'mkt', title: 'Digital marketing', text: 'SEO, search and social ads, and content that brings the right customers to your business.' },
+  { id: 'social', title: 'Social media handling', text: 'We run your social accounts for you, from planning and posting to replies and monthly reports.' },
 ]
 
 export const steps = [
@@ -65,6 +67,8 @@ export const serviceDetails = {
   saas: ['MVP scoping and delivery', 'Auth, roles and billing-ready structure', 'Dashboards and admin tools', 'Architecture that can scale'],
   auto: ['Tool and API integrations', 'Approval and notification flows', 'Data sync between systems', 'Scheduled jobs and reports'],
   ai: ['REST APIs and backend services', 'Database design and migration', 'LLM features with sensible guardrails', 'Deployment and monitoring setup'],
+  mkt: ['SEO and local search setup', 'Google and Meta ad campaigns', 'Content and email campaigns', 'Analytics and monthly reporting'],
+  social: ['Content calendar and post design', 'Scheduling and daily posting', 'Comments, messages and community replies', 'Growth and engagement reports'],
 }
 
 export const solutions = [

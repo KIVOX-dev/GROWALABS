@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Globe, Layers, Workflow, Server } from 'lucide-react'
+import { Menu, X, ChevronDown, Globe, Layers, Workflow, Server, Megaphone, Share2 } from 'lucide-react'
 import { nav, services, serviceDetails } from '../data/content'
 import { solutionGroups } from '../data/solutions'
 import { solutionIcons } from './solutionIcons'
@@ -26,7 +26,7 @@ function useDropdown() {
   return { open, setOpen, show, hide, wrap }
 }
 
-const serviceIcons = { web: Globe, saas: Layers, auto: Workflow, ai: Server }
+const serviceIcons = { web: Globe, saas: Layers, auto: Workflow, ai: Server, mkt: Megaphone, social: Share2 }
 
 function ServicesMenu() {
   const { open, setOpen, show, hide, wrap } = useDropdown()

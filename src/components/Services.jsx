@@ -40,6 +40,8 @@ const glyphs = {
   web: [<rect key="a" x="4" y="6" width="40" height="30" rx="3" />, <path key="b" d="M4 14h40" />, <path key="c" d="M10 24h14M10 29h9" />],
   saas: [<path key="a" d="M6 38V22M16 38V12M26 38V26M36 38V16" />, <path key="b" d="M4 40h40" />],
   auto: [<circle key="a" cx="10" cy="24" r="5" />, <circle key="b" cx="38" cy="12" r="5" />, <circle key="c" cx="38" cy="36" r="5" />, <path key="d" d="M15 22l18-8M15 26l18 8" />],
+  mkt: [<path key="a" d="M6 20v8h8l16 10V10L14 20z" />, <path key="b" d="M38 18c3 3 3 9 0 12" />],
+  social: [<circle key="a" cx="12" cy="24" r="5" />, <circle key="b" cx="36" cy="12" r="5" />, <circle key="c" cx="36" cy="36" r="5" />, <path key="d" d="M17 22l14-8M17 26l14 8" />],
   ai: [<ellipse key="a" cx="24" cy="12" rx="16" ry="6" />, <path key="b" d="M8 12v12c0 3.3 7 6 16 6s16-2.7 16-6V12" />, <path key="c" d="M8 24v12c0 3.3 7 6 16 6s16-2.7 16-6V24" />],
 }
 
