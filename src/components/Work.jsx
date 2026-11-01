@@ -15,7 +15,9 @@ const star = (cx, cy, r) =>
 function Stamp({ label }) {
   const c = STAMP_COLOR[label] || '#5a9f16'
   const text = label.toUpperCase()
-  const fs = text.length > 14 ? 11 : text.length > 10 ? 17 : 22
+  const lines = text.length > 10 ? text.split(' ') : [text]
+  const fs = lines.length > 1 ? (text.length > 14 ? 17 : 20) : 25
+  const bh = lines.length > 1 ? 62 : 46
   const arc = text.length > 14 ? 11 : 14
   const id = text.replace(/\W/g, '')
   return (
@@ -25,20 +27,24 @@ function Stamp({ label }) {
         <path id={`top-${id}`} d="M 23,100 A 77 77 0 0 1 177,100" />
         <path id={`bot-${id}`} d="M 17,100 A 83 83 0 0 0 183,100" />
       </defs>
-      <g filter={`url(#rough-${id})`} fill={c} stroke={c}>
-        <circle cx="100" cy="100" r="97" fill="#fff" fillOpacity="0.82" stroke="none" />
-        <circle cx="100" cy="100" r="93" fill="none" strokeWidth="4" />
-        <circle cx="100" cy="100" r="62" fill="none" strokeWidth="2" />
+      <g fill={c} stroke={c}>
+        <circle cx="100" cy="100" r="98" fill="#fff" fillOpacity="0.94" stroke="none" />
+        <g filter={`url(#rough-${id})`}>
+          <circle cx="100" cy="100" r="93" fill="none" strokeWidth="5" />
+          <circle cx="100" cy="100" r="62" fill="none" strokeWidth="2.5" />
+        </g>
         <text fontSize={arc} fontWeight="700" letterSpacing="2" stroke="none" textAnchor="middle"><textPath href={`#top-${id}`} startOffset="50%">{`• ${text} •`}</textPath></text>
         <text fontSize={arc} fontWeight="700" letterSpacing="2" stroke="none" textAnchor="middle"><textPath href={`#bot-${id}`} startOffset="50%">{`• ${text} •`}</textPath></text>
         <polygon points={star(100, 55, 9)} stroke="none" />
         <polygon points={star(80, 62, 6)} stroke="none" />
         <polygon points={star(120, 62, 6)} stroke="none" />
-        <path d="M 84 143 L 95 154 L 118 126" fill="none" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M 87 144 L 96 153 L 115 133" fill="none" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
         <g transform="rotate(-10 100 100)">
-          <rect x="14" y="78" width="172" height="44" rx="6" stroke="none" />
-          <rect x="18" y="82" width="164" height="36" rx="4" fill="none" stroke="#fff" strokeWidth="1.2" />
-          <text x="100" y="100" fontSize={fs} fontWeight="800" letterSpacing={text.length > 14 ? 0.4 : 1.5} textAnchor="middle" dominantBaseline="central" fill="#fff" stroke="none">{text}</text>
+          <rect x="12" y={100 - bh / 2} width="176" height={bh} rx="6" stroke="none" />
+          <rect x="16" y={104 - bh / 2} width="168" height={bh - 8} rx="4" fill="none" stroke="#fff" strokeWidth="1.2" />
+          {lines.map((ln, i) => (
+            <text key={ln} x="100" y={100 + (i - (lines.length - 1) / 2) * (fs + 2)} fontSize={fs} fontWeight="800" letterSpacing="1" textAnchor="middle" dominantBaseline="central" fill="#fff" stroke="none">{ln}</text>
+          ))}
         </g>
       </g>
     </svg>

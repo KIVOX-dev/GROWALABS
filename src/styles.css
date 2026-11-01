@@ -1472,7 +1472,7 @@ img.logo { display: block; height: auto; width: auto; max-height: 40px; object-f
 .wk-grid { display: grid; gap: 28px; }
 .wk-card { display: grid; background: #fff; border: 1px solid var(--line); }
 .wk-shot { display: block; position: relative; background: #f1ece3; border-bottom: 1px solid var(--line); overflow: hidden; }
-.wk-stamp { position: absolute; right: 12px; bottom: 10px; width: clamp(96px, 30%, 128px); height: auto; transform: rotate(-12deg); pointer-events: none; filter: drop-shadow(0 2px 4px rgba(0,0,0,.18)); font-family: var(--sans, system-ui, sans-serif); }
+.wk-stamp { position: absolute; right: 12px; bottom: 10px; width: clamp(120px, 38%, 156px); height: auto; transform: rotate(-12deg); pointer-events: none; filter: drop-shadow(0 2px 4px rgba(0,0,0,.18)); font-family: var(--sans, system-ui, sans-serif); }
 .wk-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #f6f1e8; border-bottom: 1px solid var(--line); }
 .wk-bar i { width: 9px; height: 9px; border-radius: 50%; background: #d6cdbd; }
 .wk-bar em { margin-left: 10px; font-style: normal; font-family: var(--mono); font-size: 0.7rem; color: var(--muted); padding: 3px 10px; background: #fff; border: 1px solid var(--line); border-radius: 4px; }
