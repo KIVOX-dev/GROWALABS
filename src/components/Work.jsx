@@ -8,7 +8,7 @@ export default function Work() {
     <section className="section" id="work">
       <div className="container">
         <SectionHead eyebrow="Selected work" title="Things we have built.">
-          A client website, a product of our own, and a custom tool for an organisation. Each one is live, so you can open it and see.
+          Client websites, a product of our own, and a custom tool for an organisation. Each one is live, so you can open it and see.
         </SectionHead>
         <motion.div className="wk-grid" variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.05 }}>
           {work.map((w) => (
