@@ -76,7 +76,7 @@ Almost all text lives in `src/data/`, so you can change copy without touching co
 
 ### Things to change before launch
 
-- **Contact email.** `site.contact.email` in `src/data/content.js` is still the placeholder `hello@example.com`.
+- **Contact email.** `site.contact.email` in `src/data/content.js` is set to `growalabs@gmail.com`.
 - **Legal pages.** The terms and privacy policy are general templates, not legal advice. Have a lawyer in India review them, and check the facts against how your site and services really work.
 - **Sample data.** Dashboards and figures on the solution pages are invented for illustration. Each page says so.
 

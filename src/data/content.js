@@ -4,7 +4,7 @@ export const site = {
   description:
     'A small software team building websites, SaaS products, automation and backend systems for businesses that need software that works.',
   contact: {
-    email: 'hello@example.com', // TODO: replace with real contact address
+    email: 'growalabs@gmail.com',
     phone: '', // optional
     location: 'Coimbatore, Tamil Nadu, India',
   },
